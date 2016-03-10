@@ -16,6 +16,11 @@
     <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
   <% end %>
   <!--end add for devise navigation-->
+
+  <% flash.each do |name, message| %>
+    <%= content_tag :div, message, :id => "flash_#{name}" %>
+  <% end %>
+  
 <%= yield %>
 
 </body>
