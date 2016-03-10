@@ -1,0 +1,6 @@
+<h1>Add a todo to the current list</h1>
+  <% form_for @todo, :url => session_path(@todo) do |f| %>
+    <%= f.label :name %>: <%= f.text_field :name %>
+    <%= f.hidden_field :done, :value => false %>
+    <%= f.submit "Add todo to current list" %>
+<% end %>
